@@ -1,15 +1,14 @@
 function App() {
   const name = '리액트';
-  let rtn='';
-  if(name === '리액트'){
-    rtn=(<h1>리액트안녕</h1>);
-  }
-  else{
-    rtn=(<h2>잘 작동하냐</h2>)
-  }
+  const style = {
+    backgroundcolor: 'black',
+    color: 'aqua',
+    fontsize : '48px',
+    fontweight : 'bold',
+    padding: 16
+  };
   return (
-    <div>
-      {rtn}
+    <div style={style}>{name}
     </div>
   );
 }
