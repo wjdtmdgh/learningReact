@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
+  const name = '리액트';
+  let rtn='';
+  if(name === '리액트'){
+    rtn=(<h1>리액트안녕</h1>);
+  }
+  else{
+    rtn=(<h2>잘 작동하냐</h2>)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {rtn}
     </div>
   );
 }
