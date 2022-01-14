@@ -2,9 +2,7 @@ import  MyComponent from './MyComponent';
 const App =()=>{
   return(
     <div>
-      <MyComponent name="React"/>
-      <MyComponent name="AAA"/>
-      < MyComponent/>
+      <MyComponent MyComponent name="React">리액트</MyComponent>
     </div>
   );
 };
