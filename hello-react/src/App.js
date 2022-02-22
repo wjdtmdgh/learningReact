@@ -7,10 +7,7 @@ class App extends Component {
     return (
       <div className="react">
         {name}
-        <MyComponent name="react2" />
-        <MyComponent name="react3" />
-        <MyComponent name="react4" />
-        <MyComponent name="react5" />
+        <MyComponent>정승호</MyComponent>
       </div>
     );
   }
