@@ -16,7 +16,7 @@ class EventPractice extends Component {
           onChange={() => {
             alert(this.state.message);
             this.setState({
-              message: "ddd",
+              message: "",
             });
           }}
         />
