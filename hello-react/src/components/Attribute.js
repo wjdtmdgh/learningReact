@@ -1,11 +1,12 @@
 import { Component } from "react";
+
 class Attribute extends Component {
   render() {
     return (
-      <header>
+      <div>
         <h1>{this.props.title}</h1>
-        <b>{this.props.sub}</b>
-      </header>
+        <h2>{this.props.desc}</h2>
+      </div>
     );
   }
 }

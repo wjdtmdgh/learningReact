@@ -2,13 +2,23 @@ import { Component } from "react";
 
 class Nav extends Component {
   render() {
-    var i = 0;
     var lists = [];
     var data = this.props.data;
+    var i = 0;
     while (i < data.length) {
       lists.push(
-        <li>
-          <a href={"/Nav" + data[i].id}>{data[i].title}</a>
+        <li key={data[i].id}>
+          {" "}
+          <a
+            href={data[i].id}
+            data-id={data[i].id} //??
+            onClick={function (e) {
+              e.preventDefault();
+              this.props.onChangePage(e.target.dataset.id);
+            }.bind(this)}
+          >
+            {data[i].title}
+          </a>
         </li>
       );
       i = i + 1;
