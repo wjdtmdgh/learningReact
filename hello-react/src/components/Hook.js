@@ -4,12 +4,8 @@ const Hook = () => {
   const [name, setName] = useState(0);
   const [nickname, setNickname] = useState(0);
   useEffect(() => {
-    console.log("랜더링완료!");
-    console.log({
-      name,
-      nickname,
-    });
-  });
+    console.log(name);
+  }, [name]);
   const onChangeName = (e) => {
     setName(e.target.value);
   };
