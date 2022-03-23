@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Practice = () => {
+const IterationSample = () => {
   const [names, setNames] = useState([
     { id: 1, text: "눈사람" },
     { id: 2, text: "눈" },
@@ -37,4 +37,4 @@ const Practice = () => {
     </div>
   );
 };
-export default Practice;
+export default IterationSample;

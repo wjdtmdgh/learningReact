@@ -3,12 +3,13 @@ import "./App.css";
 // import Header from "./components/Header";
 // import Nav from "./components/Nav";
 // import Attribute from "./components/Attribute";
-import Practice from "./components/Practice";
+//import IterationSample from "./componets/IterationSample"
+import Hook from "./components/Hook";
 class App extends Component {
   render() {
     return (
       <div>
-        <Practice></Practice>
+        <Hook></Hook>
       </div>
     );
   }
