@@ -1,10 +1,31 @@
-import { Component } from "react";
+import { useState } from "react";
 
-class Practice extends Component {
-  render() {
-    var name = ["눈사람", "얼음", "눈", "바람"];
-    var nameList = name.map((names, index) => <li key={index}>{names}</li>);
-    return <ul>{nameList}</ul>;
-  }
-}
+const Practice = () => {
+  const [names, setnames] = useState([
+    { id: 1, text: "눈사람" },
+    { id: 2, text: "눈" },
+    { id: 3, text: "바람" },
+    { id: 4, text: "눈꽃" },
+  ]);
+  const onChange = (e) => setInputText(e.target.value);
+  const onClick = () => {
+    const nextNames = names.concat({
+      id: nextId,
+      text: inputText,
+    });
+    setNextId(nextId + 1);
+    setnames(nextNames);
+    setInputText("");
+  };
+  const [inputText, setInputText] = useState("");
+  const [nextId, setNextId] = useState(5);
+  const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
+  return (
+    <div>
+      <input value={inputText} onChange={onChange} />
+      <button onClick={onClick}>추가</button>
+      <ul>{nameList}</ul>
+    </div>
+  );
+};
 export default Practice;
