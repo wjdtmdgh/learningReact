@@ -1,25 +1,32 @@
-import { useReducer } from "react";
+import { useState } from "react";
 
-function reducer(state, action) {
-  console.log(1);
-  switch (action.type) {
-    case "INCREMENT":
-      return { value: state.value + 1 };
-    case "DECREMENT":
-      return { value: state.value - 1 };
-    default:
-      return state;
-  }
-}
+const getAvergage = (numbers) => {
+  console.log("평균값 계산중");
+  if (numbers.length === 0) return 0;
+  const sum = numbers.reduce((a, b) => a + b);
+  return sum / numbers.length;
+};
 const Hook = () => {
-  const [state, dispatch] = useReducer(reducer, { value: 0 });
+  var [lists, setLists] = useState([]);
+  var [number, setNumber] = useState("1");
+  const onChange = (e) => {
+    setNumber(e.target.value);
+  };
+  const onClick = (e) => {
+    const nextInt = lists.concat(parseInt(number));
+    setLists(nextInt);
+    setNumber("");
+  };
   return (
     <div>
-      <p>
-        현재 카운터값은<b>{state.value}</b>입니다
-      </p>
-      <button onClick={dispatch({ type: "INCREMENT" })}>+1</button>
-      <button onClick={dispatch({ type: "DECREMENT" })}>+1</button>
+      <input value={number} onChange={onChange} />
+      <button onClick={onClick}>등록</button>
+      <ul>
+        {lists.map((value, index) => (
+          <li key={index}>{value}</li>
+        ))}
+      </ul>
+      <b>평균값 :</b> {getAvergage(lists)}
     </div>
   );
 };
