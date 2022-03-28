@@ -4,12 +4,13 @@ import "./App.css";
 // import Nav from "./components/Nav";
 // import Attribute from "./components/Attribute";
 //import IterationSample from "./componets/IterationSample"
-import Hook from "./components/Hook";
+//import Hook from "./components/Hook";
+import CSSModule from "./components/CSSModule";
 class App extends Component {
   render() {
     return (
       <div>
-        <Hook></Hook>
+        <CSSModule />
       </div>
     );
   }
