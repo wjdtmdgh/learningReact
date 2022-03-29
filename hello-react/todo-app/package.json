@@ -1,5 +1,5 @@
 {
-  "name": "hello-react",
+  "name": "todo-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,8 +9,9 @@
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-scripts": "5.0.0",
-    "styled-components": "^5.3.5",
+    "sass": "^1.49.9",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
