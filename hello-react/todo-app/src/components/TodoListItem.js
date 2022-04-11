@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   MdCheckBoxOutlineBlank,
   MdCheckBox,
@@ -21,4 +22,4 @@ const TodoListItem = ({ todo, onRemove }) => {
     </div>
   );
 };
-export default TodoListItem;
+export default React.memo(TodoListItem);
